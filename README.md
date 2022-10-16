@@ -1,6 +1,5 @@
 # hitechfabrication
-This is my first project as freelancer.
-I used html, css, vanilla javascript, and bootstrap to build the client side, and I used nodeJS, expressJS to build our backend and api app.
+This is my first project as a freelancer. I used HTML, CSS, vanilla javascript, and bootstrap to build the client side, and I used nodeJS, and ExpressJS to build our backend and API app.
 Also, I deployed the website on NameCheap.
 
 This is the list of npm packages used with our nodeJS app:
