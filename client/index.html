@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.ico"
+      type="image/x-icon"
+    />
+    <title>Hi Tech Fabrication</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="preload" href="assets/style/style.css" as="style" />
+    <link rel="preload" href="assets/js/index.js" as="script" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style/style.css" />
+  </head>
+  <body>
+    <div id="topbar" class="d-flex align-items-center">
+      <div
+        class="container d-flex align-items-center justify-content-center justify-content-lg-start"
+      >
+        <div class="d-flex align-items-center">
+          <a href="https://www.instagram.com/hitechfabrication/"
+            ><i class="bx bxl-instagram"></i><span>Instagram</span></a
+          >
+        </div>
+        <div class="d-flex align-items-center">
+          <a href="https://www.linkedin.com/mwlite/in/fawaz-abdul-hadi-75ab28b2"
+            ><i class="bx bxl-linkedin"></i><span>Linkedin</span></a
+          >
+        </div>
+      </div>
+    </div>
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-lg-between"
+      >
+        <h1
+          class="logo d-flex align-items-center justify-content-lg-between me-auto me-lg-0"
+        >
+          <a href="index.html">Hi-Tech Fabrication</a>
+        </h1>
+
+        <nav
+          class="navbar navbar-expand-lg navbar-dark bg-dark order-last order-lg-0"
+        >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="navbar" class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link scrollto active"
+                  onclick="hideNav()"
+                  href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" onclick="hideNav()" href="#main"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link scrollto"
+                  onclick="hideNav()"
+                  href="#products"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" onclick="hideNav()" href="#contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <a
+          href="javascript:ScrollToMessage()"
+          class="send-message-btn d-none d-lg-flex"
+          >Send a message</a
+        >
+      </div>
+    </header>
+    <section id="home" class="d-flex align-items-center">
+      <div class="container position-relative text-left text-lg-start">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1 id="home-title"></h1>
+            <h2 id="subtitle"></h2>
+            <div class="btns">
+              <a href="#products" class="product-btn">Our products</a>
+              <a href="javascript:ScrollToMessage()" class="send-message-btn"
+                >Send a message</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 d-flex align-items-center justify-content-center position-relative"
+          >
+            <a href="#" onclick="openVideo()" class="play-btn"></a>
+          </div>
+
+          <div id="myVideo" class="video">
+            <span class="close cursor" onclick="closeVideo()">&times;</span>
+            <div
+              class="video-content d-flex justify-content-center align-items-center"
+            >
+              <video id="video" width="600px" height="400px" controls>
+                <source src="./assets/video/vid1.mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main id="main">
+      <section id="about" class="d-flex align-items-center">
+        <div class="container">
+          <div class="row">
+            <div id="about-img" class="col-lg-4 order-lg-2 order-1">
+              <img
+                class="d-flex justify-content-center align-items-center"
+                src="assets/img/logo.png"
+                alt="logo"
+              />
+            </div>
+            <div id="about-content" class="col-lg-8 order-1"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section id="products">
+      <div class="container">
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Some photos from our work</p>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="carousel-indicators d-none">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="4"
+            aria-current="true"
+            aria-label="Slide 5"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="5"
+            aria-label="Slide 6"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="6"
+            aria-label="Slide 7"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="7"
+            aria-label="Slide 8"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="8"
+            aria-current="true"
+            aria-label="Slide 9"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="9"
+            aria-label="Slide 10"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="10"
+            aria-label="Slide 11"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="11"
+            aria-label="Slide 12"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="12"
+            aria-label="Slide 13"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="13"
+            aria-label="Slide 14"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="14"
+            aria-label="Slide 15"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="15"
+            aria-label="Slide 16"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <div
+          class="row d-flex justify-content-center align-items-center g-0"
+          id="products_row"
+        >
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_1.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_2.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_3.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_4.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_5.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_6.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_7.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_8.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_9.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_10.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_11.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_12.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_13.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_14.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_15.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_16.png" alt="product" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev d-none carousel-btn"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next d-none carousel-btn"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div>
+      </div>
+      <div class="container-fluid mapouter">
+        <div class="gmap_canvas">
+          <iframe
+            width="100%"
+            height="400"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=Mahjar%20Suhi%20Fakher%20Eddine%20bldg,%20Tripoli&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="yes"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe>
+        </div>
+      </div>
+      <div class="container pt-4">
+        <div class="row mt-4">
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+              </div>
+              <div class="open-hours">
+                <i class="bi bi-clock"></i>
+                <h4>Open Hours:</h4>
+              </div>
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+              </div>
+              <div class="phone">
+                <i onmouseover="copyValue()" class="bi bi-phone"></i>
+                <h4>Call:</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 mt-5 mt-lg-0">
+            <form
+              id="form"
+              action="https://example.com/send"
+              method="post"
+              role="form"
+              class="email-form"
+            >
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="subject"
+                  id="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group mt-3">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  id="message"
+                  rows="8"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <input
+                  class="form-control form-control-sm"
+                  type="file"
+                  id="inputfile"
+                  name="inputfile"
+                  accept=".pdf,image/*"
+                  multiple
+                />
+              </div>
+              <div class="my-3">
+                <div class="error-message"></div>
+                <div class="sent-message">
+                  Your message has been sent. Thank you!
+                </div>
+              </div>
+              <div
+                class="g-recaptcha"
+                data-theme="dark"
+                data-sitekey="web_site_key"
+              ></div>
+              <div class="text-center">
+                <button type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Hi-Tech Fabrication</span></strong
+          >.<br />All Rights Reserved
+        </div>
+      </div>
+    </footer>
+    <a
+      href="#home"
+      id="back-to-top"
+      class="d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/screenSize.js"></script>
+    <script src="./assets/js/index.js" defer></script>
+    <script src="./assets/js/validate.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
